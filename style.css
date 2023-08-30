@@ -70,4 +70,51 @@ main {
 }
 
 /* ========== CSS RESET END =========== */
+.result {
+    text-align: center;
+    background-image: linear-gradient(to bottom, var(--lig-slate-blue) 10%, var(--lig-royal-blue));
+    padding: 2rem;
+    color: var(--lig-lavender);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0 0 9% 9%;
+}
+
+.result > h1 {
+    font-size: 1rem;
+    
+}
+
+.result > .score-container {
+    background-image: linear-gradient(to top, var(--persian-blue), var(--violet-blue));
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.score-container > h2, .result > h3 {
+    color: var(--white);
+}
+
+.score-container > h2 {
+    font-size: 3rem;
+    font-weight: var(--fw-m);
+    color: var(--white);
+}
+
+.score-container > h2 + span {
+    font-size: 0.92rem;
+    font-weight: var(--fw-m);
+    color: var(--lig-lavender);
+}
+
+p.result-comment {
+    font-size: 0.9rem;
+    width: 75%;
+}
 
