@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&display=swap');
+/* ======== CUSTOM PROPERTIES ========= */
+:root {
+    /* ======== Primary COLORS ========= */
+    --pri-light-red: hsl(0, 100%, 67%);
+    --pri-orange-yellow: hsl(39, 100%, 56%);
+    --pri-green-teal: hsl(166, 100%, 37%);
+    --pri-cobalt-blue: hsl(234, 85%, 45%);
+    /* ======== GRADIENTS ========= */
+    --lig-slate-blue:  hsl(251,100%,63%);
+    --lig-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 0.5);
+    --persian-blue: hsla(241, 72%, 46%, .1);
+    /* ======== NEUTRAL COLORS ========= */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --lig-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    /* ======== FONT PROPERTIES ========= */
+    --ff: 'Haken Grotesk', sans-serif;
+    --fs: 18px;
+    --fw-s: 500;
+    --fw-m: 700;
+    --fw-l: 800;
+}
+
+/* ======== CSS RESET START ========= */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--ff);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--white);
+    font-size: var(--fs);
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ========== CSS RESET END =========== */
+
+.result {
+    text-align: center;
+    background-image: linear-gradient(to bottom, var(--lig-slate-blue) 10%, var(--lig-royal-blue));
+    padding: 2rem;
+    color: var(--lig-lavender);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.result > h1 {
+    font-size: 1rem;
+    
+}
+
+.result > .score-container {
+    background-image: linear-gradient(to top, var(--persian-blue), var(--violet-blue));
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.score-container > h2 {
+    font-size: 3rem;
+    font-weight: var(--fw-m);
+    color: var(--white);
+}
+
+.score-container > h2 + span {
+    font-size: 0.92rem;
+    font-weight: var(--fw-m);
+    color: var(--lig-lavender);
+}
