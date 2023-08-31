@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,10 +25,23 @@
       </div>
       <div class="summary">
         <h1>Summary</h1>
-        <div class="summary-tabs"></div>
-        <div class="summary-tabs"></div>
-        <div class="summary-tabs"></div>
-        <div class="summary-tabs"></div>
+        <div class="summary-tab one">
+          <p class="metric">Reaction</p>
+          <div class="score"><span>80</span> / 100</div>
+        </div>
+        <div class="summary-tab two">
+          <p class="metric">Memory</p>
+          <div class="score"><span>92</span> / 100</div>
+        </div>
+        <div class="summary-tab three">
+          <p class="metric">Verbal</p>
+          <div class="score"><span>61</span> / 100</div>
+        </div>
+        <div class="summary-tab four">
+          <p class="metric">Visual</p>
+          <div class="score"><span>72</span> / 100</div>
+        </div>
+        <button class="btn">Continue</button>
       </div>
     </section>
   </main>
