@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+@font-face {
+    font-family: myFont;
+    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
 /* ======== CUSTOM PROPERTIES ========= */
 :root {
     /* ======== Primary COLORS ========= */
@@ -17,11 +20,12 @@
     --lig-lavender: hsl(241, 100%, 89%);
     --dark-gray-blue: hsl(224, 30%, 27%);
     /* ======== FONT PROPERTIES ========= */
-    --ff: 'Haken Grotesk', sans-serif;
+    --ff: 'myFont', sans-serif;
     --fs: 18px;
     --fw-s: 500;
     --fw-m: 700;
     --fw-l: 800;
+    --bs:  0px 5px 20px -5px rgba(150, 150, 150, 0.5);
 }
 
 /* ======== CSS RESET START ========= */
@@ -66,17 +70,17 @@ p, h1, h2, h3, h4, h5, h6 {
 main {
     min-height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    
 }
 
 /* ========== CSS RESET END =========== */
 
 .summary-results {
     display: flex;
-    flex-flow: row wrap;
-}
-
-.summary-results > div {
-    flex-basis: 20.83rem;
+    flex-flow: column;
+    width: 100%;
 }
 
 .result {
@@ -225,7 +229,67 @@ p.result-comment {
     padding: 1rem;
     border-radius: 2rem;
     margin-top: 0.5rem;
+    text-decoration: none;
+    text-align: center;
 }
+
+.btn:hover {
+    background-image: linear-gradient(to bottom, var(--lig-slate-blue) 10%, var(--lig-royal-blue));
+}
+
 @media(min-width: 768px) {
 
+    main {
+        align-items: center;    
+    }
+    
+    .summary-results {
+        display: flex;
+        flex-direction: row;
+        width: 650px;
+        height: fit-content;
+        justify-content: center;
+        box-shadow: var(--bs);
+        border-radius: 2rem;
+    }
+
+    .summary-results > div {
+        flex-basis: 325px;
+        align-self: flex-start;
+    }
+
+    .result {
+        padding: 2rem 3.2rem;
+        align-self: stretch;
+        border-radius: 9%;
+
+    }
+
+    .result > .score-container {
+        width: 170px;
+        height: 170px;
+    }
+
+    .result > h3 {
+        font-size: 1.5rem;
+    }
+
+    .score-container > h2 {
+        font-size: 4rem;
+    }
+
+    .summary {
+        border-radius: 0 9% 9% 0;
+        height: 430px;
+        box-shadow: 5px 0px 14px -11px #000000;
+    }
+
+    .summary-tab {
+        padding: 0.75rem;
+    }
+
+    .btn {
+        padding: 0.6rem;
+        margin-top: 1rem;
+    }
 }
