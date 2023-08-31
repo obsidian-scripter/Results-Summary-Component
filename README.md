@@ -18,4 +18,4 @@ To view the project locally or make modifications, follow these steps:
 1. **Clone the Repository:** Clone this repository to your local machine using Git.
 
    ```bash
-   git clone https://github.com/your-username/results-summary-component
+   git clone https://github.com/obsidian-scripter/Results-Summary-Component
